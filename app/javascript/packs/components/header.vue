@@ -2,6 +2,7 @@
 <div>
   <ul id="dropdown" class="dropdown-content">
     <li><a href="#">Top</a></li>
+    <li><a href="#">Map</a></li>
     <li><a href="#">About</a></li>
     <li><a href="#">Contact</a></li>
   </ul>
@@ -10,6 +11,7 @@
       <a href="/" class="brand-logo left">Todo Application</a>
       <ul class="right hide-on-med-and-down">
         <li><router-link to="/home">Top</router-link></li>
+        <li><router-link to="/map">Map</router-link></li>
         <li><router-link to="/about">About</router-link></li>
         <li><router-link to="/contact">Contact</router-link></li>
       </ul>

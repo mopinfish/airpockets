@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get '/signout', to: 'sessions#destroy'
 
   get 'home', to: 'home#index'
+  get '/map', to: 'home#index'
   get '/about',   to: 'home#index'
   get '/contact', to: 'home#index'
   namespace :api, format: 'json' do
