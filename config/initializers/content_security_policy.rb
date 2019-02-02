@@ -10,16 +10,16 @@ Rails.application.config.content_security_policy do |policy|
   policy.img_src     :self, :https, :data, :blob
   policy.object_src  :none
   policy.child_src   :blob
+  policy.style_src   :self, :https, :unsafe_inline
 
   if Rails.env.development?
     policy.default_src :self, :https, :unsafe_eval
     policy.script_src :self, :https, :unsafe_eval
     policy.connect_src :self, :https, 'http://localhost:3035', 'ws://localhost:3035', 'https://*.tiles.mapbox.com', 'https://api.mapbox.com'
-    policy.style_src   :self, :https, :unsafe_inline
   else
     policy.script_src :self, :https
     policy.default_src :self, :https
-    policy.style_src   :self, :https
+    policy.connect_src :self, :https, 'https://*.tiles.mapbox.com', 'https://api.mapbox.com'
   end
   # Specify URI for violation reports
   # policy.report_uri "/csp-violation-report-endpoint"
