@@ -3,7 +3,7 @@
     <!-- 新規作成部分 -->
     <div class="row">
       <div class="col s10 m11">
-        <input v-model="newTask" class="form-control" placeholder="Add your task!!">
+        <input v-model="newTask" class="form-control" placeholder="Add your task!!" v-on:click="createTask">
       </div>
       <div class="col s2 m1">
         <div class="btn-floating waves-effect waves-light red">
@@ -13,14 +13,24 @@
     </div>
     <!-- リスト表示部分 -->
     <div>
-    <div>
-      <ul class="collection">
-        <li v-bind:id="'row_task_' + task.id" class="collection-item" v-for="task in tasks" v-if="!task.is_done">
-          <input type="checkbox" v-on:change="doneTask(task.id)" v-bind:id="'task_' + task.id" />
-          <label v-bind:for="'task_' + task.id" class="word-color-black">{{ task.name }}</label>
-        </li>
-      </ul>
-    </div>
+      <div>
+        <ul class="collection">
+          <li v-bind:id="'row_task_' + task.id" class="collection-item" v-for="task in tasks" v-if="!task.is_done">
+            <label v-bind:for="'task_' + task.id" class="word-color-black">{{ task.name }}</label>
+            <input type="checkbox" v-on:change="doneTask(task.id)" v-bind:id="'task_' + task.id" />
+            <input type="checkbox" v-on:change="doneTask(task.id)" v-bind:id="'task_' + task.id" />
+            <label v-bind:for="'task_' + task.id" class="word-color-black">{{ task.name }}</label>
+            <label v-bind:for="'task_' + task.id" class="word-color-black">
+              <input type="checkbox" v-on:change="doneTask(task.id)" v-bind:id="'task_' + task.id" />
+              {{ task.name }}
+            </label>
+            <label v-bind:for="'task_' + task.id" class="word-color-black">
+              {{ task.name }}
+              <input type="checkbox" v-on:change="doneTask(task.id)" v-bind:id="'task_' + task.id" />
+            </label>
+          </li>
+        </ul>
+      </div>
     </div>
     <!-- 完了済みタスク表示ボタン -->
     <div class="btn" v-on:click="displayFinishedTasks">Display finished tasks</div>
