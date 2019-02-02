@@ -3,7 +3,7 @@ ENV := development
 start:
 	bin/server
 migrate:
-	bundle exec ridgepole -c config/database.yml -E $(ENV) --apply -f db/Schemafile 
+	bundle exec ridgepole -c config/database.yml -E $(ENV) -f db/Schemafile --apply 
 install:
 	bundle install --path=vendor/bundle --without production
 heroku-migrate:
