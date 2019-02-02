@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
     render: h => h(MapBase)
   })
 
+  console.log("hello vue")
   console.log(app)
 })
 
