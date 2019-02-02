@@ -1,3 +1,4 @@
+import Vue from 'vue/dist/vue.esm.js'
 import VueRouter from 'vue-router'
 import Index from '../components/index.vue'
 import About from '../components/about.vue'

@@ -23,20 +23,10 @@
     </div>
     </div>
     <!-- 完了済みタスク表示ボタン -->
-    <div class="btn">Display finished tasks</div>
-    <div class="btn">Display finished tasks</div>
     <div class="btn" v-on:click="displayFinishedTasks">Display finished tasks</div>
     <!-- 完了済みタスク一覧 -->
     <div id="finished-tasks" class="display_none">
       <ul class="collection">
-        <li id="row_task_4" class="collection-item">
-          <input type="checkbox" id="'task_4" checked="checked" />
-          <label v-bind:for="task_4" class="line-through">Done Task</label>
-        </li>
-        <li id="row_task_5" class="collection-item">
-          <input type="checkbox" id="'task_5" checked="checked" />
-          <label v-bind:for="task_5" class="line-through">Done Task</label>
-        </li>
       </ul>
     </div>
   </div>
@@ -87,7 +77,7 @@
         el_clone.getElementsByTagName('label')[0].classList.remove('word-color-black');
         var li = document.querySelector('#finished-tasks > ul > li:first-child');
         document.querySelector('#finished-tasks > ul').insertBefore(el_clone, li);
-      }
+      },
       createTask: function () {
         if (!this.newTask) return;
         
