@@ -1,4 +1,17 @@
-# README
+# airpockets
+
+## Setup
+
+install npm packages
+```
+npm i -g yarn
+```
+
+install node packages
+```
+cd airpockets
+yarn install
+```
 
 This README would normally document whatever steps are necessary to get the
 application up and running.

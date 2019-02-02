@@ -1,10 +1,10 @@
-create_table "tasks", force: :cascade do |t|
+create_table "tasks", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
   t.string "name", null: false
   t.boolean "is_done", default: false, null: false
   t.timestamps
 end
 
-create_table "users", force: :cascade do |t|
+create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
   t.string "provider", null: false
   t.string "uid"
   t.string "user_name"
