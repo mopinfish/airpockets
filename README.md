@@ -13,25 +13,10 @@ cd airpockets
 yarn install
 ```
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Infomation
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### nodejs, ruby addonを追加 @2019/02/02
+```
+heroku buildpacks:add --index 1 heroku/nodejs
+heroku buildpacks:add --index 2 heroku/ruby
+```
