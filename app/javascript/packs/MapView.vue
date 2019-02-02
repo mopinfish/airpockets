@@ -37,8 +37,8 @@ export default {
                     })
                 ],
                 view: new View({
-                    center:[0,0],
-                    zoom:0
+                    center:[139,40],
+                    zoom: 10
                 })
             })
         }

@@ -1,2 +1,4 @@
 start:
-	bin/rails s -p 3000 -b 0.0.0.0
+	bin/server
+migrate:
+	bundle exec ridgepole -c config/database.yml -E development --apply -f db/Schemafile
