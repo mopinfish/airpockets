@@ -13,3 +13,4 @@ deploy:
 	@git merge develop
 	@git push origin master
 	@git push heroku master
+	@git checkout develop
