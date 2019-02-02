@@ -31,17 +31,17 @@ export default {
           center: [139.767052, 35.681167], // starting position [lng, lat]
           zoom: 14,
       });
-//      // Add zoom and rotation controls to the map.
-//      this.map.addControl(new mapboxgl.NavigationControl(), 'bottom-right');
-//      // Add full-screen control
-//      this.map.addControl(new mapboxgl.FullscreenControl(), 'top-right');
-//      // Add geolocate control to the map.
-//      this.map.addControl(new mapboxgl.GeolocateControl({
-//        positionOptions: {
-//          enableHighAccuracy: true
-//        },
-//        trackUserLocation: true
-//      }));
+      // Add zoom and rotation controls to the map.
+      this.map.addControl(new mapboxgl.NavigationControl(), 'bottom-right');
+      // Add full-screen control
+      this.map.addControl(new mapboxgl.FullscreenControl(), 'top-right');
+      // Add geolocate control to the map.
+      this.map.addControl(new mapboxgl.GeolocateControl({
+        positionOptions: {
+          enableHighAccuracy: true
+        },
+        trackUserLocation: true
+      }));
     }
 
   }
